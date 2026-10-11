@@ -38,7 +38,6 @@ float calculoEC() {
     cin>>EA1;
     cout<<"EA2:";
     cin>>EA2;
-    EA2 = EA2+1;
 
     int AP = accumulate(notasAP.begin(), notasAP.end(), 0);
 
@@ -53,6 +52,9 @@ float calculoEC() {
     cout<<"Cuantos puntos bonus tienes: ";
     cin >> bonus;
     float res = 0.02*AP + 0.15*(ED) + 0.3*(EA1 + EA2 + bonus);
+
+    cout<<"Tu EC: "<<res<<endl;
+
     return res;
 }
 
