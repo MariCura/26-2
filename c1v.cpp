@@ -70,7 +70,7 @@ float Calculo(){
     cin >> EF;
 
     float final = 0.25f*EC1 + 0.25f*EC2 + 0.30f*EF + 0.20f*EP;
-    cout << "Tu nota FINAL: " << final;
+    cout << "Tu nota FINAL: " << final<<endl;
     return final;
 };
 
