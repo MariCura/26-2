@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+#include "guardar.h"
 #include "Algebra_Lineal.h"
 #include "Curso.h"
 #include "ProgramacionII.h"
@@ -57,7 +58,7 @@ void menuVerNotas(vector<Curso>& cursos) {
         if (select >= 1 && select <= 4) {
             for (const auto& c : cursos) {
                 if (c.nombre == nombre) {
-                    cout << "\n" << c.nombre << c.nota << "\n";
+                    cout << "\n" << c.nombre << c.nota << " - " << c.creditos << " creditos\n";
                     encontrado = true;
                     break;
                 }
@@ -72,9 +73,12 @@ void menuVerNotas(vector<Curso>& cursos) {
 void Ponderar(vector<Curso>& cursos) {
     cout << "\n[Proximamente]\n";
 }
+
+
 int main() {
     int select;
     vector<Curso> cursos;
+    cargarNotas(cursos);
 
     do {
         cout << "\n===== CALCULADORA DE NOTAS 26-2 =====" << "\n";
@@ -91,6 +95,7 @@ int main() {
 
     } while (select != 4);
 
+    guardarNotas(cursos);
     cout << "\nHasta luego!\n";
     return 0;
 }

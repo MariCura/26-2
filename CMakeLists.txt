@@ -15,4 +15,6 @@ add_executable(Calculo_de_notas main.cpp
         Intro_meca.cpp
         Intro_meca.h
         Algebra_Lineal.cpp
-        Algebra_Lineal.h)
+        Algebra_Lineal.h
+        guardar.cpp
+        guardar.h)
