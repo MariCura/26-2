@@ -29,7 +29,7 @@ void menuCalcular(vector<Curso>& cursos) {
         else if (select == 2) cursos.push_back(getFisica());
         else if (select == 3) cursos.push_back(getAlgebra());
         else if (select == 4) cursos.push_back(getProgra());
-        else if (select == 5) cout<<"[Aun no disponible]\n";
+        else if (select == 5) cursos.push_back(getQuimica());
         else if (select == 6) cout<<"[Aun no disponible]\n";
 
     } while (select != 0);
@@ -43,6 +43,7 @@ void menuVerNotas(vector<Curso>& cursos) {
         cout << "2.- Intro a la Mecanica" << "\n";
         cout << "3.- Algebra Lineal" << "\n";
         cout << "4.- Programacion II" << "\n";
+        cout << "5.- Quimica Aplicada" << "\n";
         cout << "0.- Volver al menu principal" << "\n";
         cout << "Curso escogido: ";
         cin >> select;
@@ -54,8 +55,9 @@ void menuVerNotas(vector<Curso>& cursos) {
         else if (select == 2) nombre = "Introduccion a la Mecanica";
         else if (select == 3) nombre = "Algebra Lineal: ";
         else if (select == 4) nombre = "Programacion II: ";
+        else if (select == 5) nombre = "Quimica Aplicada: ";
 
-        if (select >= 1 && select <= 4) {
+        if (select >= 1 && select <= 5) {
             for (const auto& c : cursos) {
                 if (c.nombre == nombre) {
                     cout << "\n" << c.nombre << c.nota << " - " << c.creditos << " creditos\n";
